@@ -1,0 +1,9 @@
+@include media-breakpoint-up(lg){
+	[data-tag]{
+
+		&:before{
+			top: 30px;
+			left: 30px;
+		}
+	}
+}

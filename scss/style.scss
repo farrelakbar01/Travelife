@@ -1,0 +1,89 @@
+/*
+	Theme Name: Masty.
+	Author: Anonymous
+	Author URI:
+	Version: 1
+	Description: Benzoo. theme for Wordpress
+	License: GNU General Public License v2 or later
+	License URI: http://www.gnu.org/licenses/gpl-2.0.html
+	Text Domain: Benzoo.
+	Tags: one-column, two-columns
+	Theme URI:
+*/
+
+/* ---------------------------------------------------------
+	 1. Embedded fonts styles
+	 2. General reset
+	 3. Common site styles
+	 bgCover styles
+	 fontSecond styles
+	 fontBase styles
+	 svgBg styles
+	 pageWrapper styles
+	 pageHeader styles
+	 introBlock styles
+	 bannerSlider
+	 ibHolder styles
+	 btn styles
+	 btnTheme styles
+	 btnCallTo styles
+	 aubHeadingHead styles
+	 ajubHeading styles
+	 apcCaption styles
+	 [data-tag] styles
+	 serviceColumn styles
+	 brandLogoWrap styles
+	 cqQuote styles
+	 profilePicWrap styles
+	 callActionAsideBlock styles
+	 pageFooter styles
+	 thankyouBlock / .thankyouBlock
+	 click / .click
+	 playBtnWrap / .playBtnWrap
+	 playBtnHolder / .playBtnHolder
+	 back-top / #back-top
+	 loader-holder / .loader-holder
+---------------------------------------------------------*/
+
+@import "vendor/bootstrap/functions";
+@import "vendor/bootstrap/variables";
+
+@import "customVariables";
+@import "vendor/bootstrap/mixins";
+@import "base/customMixins";
+
+/* ---------------------------------------------------------
+	 1. Embedded fonts styles
+	 ---------------------------------------------------------*/
+
+@font-face { @include fontface(helvetica, helvetica, 400, normal); }
+@font-face { @include fontface(helvetica, helvetica-oblique, 400, italic); }
+ 
+@font-face { @include fontface(helvetica, helvetica-bold, 700, normal); }
+@font-face { @include fontface(helvetica, helvetica-boldoblique, 700, italic); }
+
+@import "vendor/fontawesone/regular";
+@import "vendor/fontawesone/solid";
+@import "vendor/fontawesone/brands";
+@import "vendor/fontawesone/fontawesome";
+
+@import "vendor/icomoon";
+//@import "vendor/simpleLineIcons";
+
+/* ---------------------------------------------------------
+	 2. General reset
+	 ---------------------------------------------------------*/
+
+@import 'base/wp-reset';
+@import "vendor/slickSlider";
+
+/* ---------------------------------------------------------
+	 3. Common site styles
+	 ---------------------------------------------------------*/
+
+@import "all";
+
+/* ---------------------------------------------------------
+	 site animations
+	 ---------------------------------------------------------*/
+@import 'animations';

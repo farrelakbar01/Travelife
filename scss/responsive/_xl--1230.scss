@@ -1,0 +1,26 @@
+@include media-breakpoint-up(xl){
+	h1, .h1{
+		font-size: (50/16) + rem;
+		line-height: (70/50);
+	}
+
+	[data-tag]{
+
+		&:before{
+			top: 40px;
+			left: 40px;
+		}
+	}
+
+	.cqQuote{
+		left: 95px;
+	}
+
+	.callActionAsideBlock{
+
+		h2, .h2{
+			font-size: 50px;
+			line-height: (65/50);
+		}
+	}
+}

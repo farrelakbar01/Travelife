@@ -1,0 +1,511 @@
+body{
+	-ms-overlfow-style: scrollbar;
+	min-width: 320px;
+}
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6{
+	a{
+		color: inherit;
+	}
+}
+h1, .h1{
+	line-height: (55/35);
+}
+/* =============================================
+	bgCover styles
+============================================= */
+.bgCover{
+	background-size: cover;
+	background-position: 50% 50%;
+}
+/* =============================================
+	fontSecond styles
+============================================= */
+.fontSecond{
+	font-family: $font-second;
+}
+/* =============================================
+	fontBase styles
+============================================= */
+.fontBase{
+	font-family: $font-family-base;
+}
+/* =============================================
+	svgBg styles
+============================================= */
+.svgBg{
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: -1;
+	@include size(100%);
+	&.svgBgHalf{
+		height: 75%;
+	}
+}
+/* =============================================
+	pageWrapper styles
+============================================= */
+#pageWrapper{
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+}
+/* =============================================
+	pageHeader styles
+============================================= */
+#pageHeader{
+	top: 0;
+	left: 0;
+	z-index: 99;
+}
+/* =============================================
+	introBlock styles
+============================================= */
+.introBlock{
+	min-height: 100vh;
+	z-index: 1;
+	font-size: 16px;
+	line-height: (30/16);
+}
+/* =============================================
+	bannerSlider
+============================================= */
+.bannerSlider{
+	.bgCover{ background-attachment: unset; }
+	.slick-dots{
+		margin-top: -38px;
+		margin-bottom: 13px;
+		padding-left: 0;
+		list-style-type: none;
+		display: flex;
+		justify-content: center;
+		li{
+			position: relative;
+			margin-right: 5px;
+			margin-left: 5px;
+		}
+		.slick-active{
+			button{
+				&:before{
+					background-color: $blue;
+				}		
+			}
+		}
+		button{
+			border: 0;
+			padding: 0;
+			line-height: 8px;
+			@include size(8px);
+			border-radius: 25px;
+			text-indent: -9999px;
+			position: relative;
+			overflow: hidden;
+			outline: none;
+			&:before{
+				position: absolute;
+				content: "";
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				text-indent: 0;
+				background-color: rgba($white, 0.5);
+			}
+		}
+	}
+}
+/* =============================================
+	ibHolder styles
+============================================= */
+.ibHolder{
+	min-height: inherit;
+}
+/* =============================================
+	btn styles
+============================================= */
+.btn{
+	&.btnMinWidth{
+		min-width: 280px;
+	}
+}
+/* =============================================
+	btnTheme styles
+============================================= */
+.btnTheme{
+	color: $white;
+	&:hover,
+	&:focus,
+	&:active{
+		background-color: $white;
+		border-color: $white;
+	}
+}
+/* =============================================
+	btnCallTo styles
+============================================= */
+.btnCallTo{
+	font-size: 11px;
+	padding: 8px 14px;
+	line-height: (13/11);
+	letter-spacing: 0.6px;
+	margin-bottom: 23px;
+	transition: color 0.3s ease;
+	&:hover{
+		color: $success;
+	}
+}
+/* =============================================
+	aubHeadingHead styles
+============================================= */
+.aubHeadingHead{
+	line-height: (30/14);
+}
+/* =============================================
+	ajubHeading styles
+============================================= */
+.ajubHeading{
+	@include pseudo(before, null, 0, 0, 0);
+	@include pseudo(after, null, 0, 0, 0);
+	&.text-white{
+		&:after,
+		&:before{
+			background-color: currentColor;
+		}
+	}
+	&:before,
+	&:after{
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 2px;
+		@include size(20px, 2px);
+	}
+	&:after{
+		margin-bottom: -2px;
+	}
+}
+/* =============================================
+	apcCaption styles
+============================================= */
+.apcCaption{
+	left: 0;
+	top: 0;
+	background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.4) 100%);
+}
+/* =============================================
+	[data-tag] styles
+============================================= */
+[data-tag]{
+	@include pseudo(before, 15px, null, null, 15px);
+	&:before{
+		@extend .fontSecond;
+		content: attr(data-tag);
+		text-transform: capitalize;
+		font-weight: $font-weight-bold;
+		font-size: 10px;
+		line-height: (11/10);
+		padding: 5px 11px;
+		border-radius: $border-radius;
+		color: $white;
+	}
+}
+
+[data-tag="featured"]{
+	&:before{
+		background-color: $danger;
+	}
+}
+/* =============================================
+	serviceColumn styles
+============================================= */
+.serviceColumn{
+	min-height: 350px;
+	.icnWrap{
+		font-size: 70px;
+		height: 70px;
+	}
+}
+/* =============================================
+	brandLogoWrap styles
+============================================= */
+.brandLogoWrap{
+	> a{
+		img{
+			opacity: 0.5;
+			transition: opacity 0.3s ease;
+
+			&:hover{
+				opacity: 1;
+			}
+		}
+	}
+}
+/* =============================================
+	cqQuote styles
+============================================= */
+.cqQuote{
+	line-height: (23/14);
+	q{
+		quotes: none;
+		@include pseudo(after, 100%, null, null, 0);
+		&:after{
+			margin-top: -1px;
+			border-style: solid;
+			border-width: 22px 22px 0 22px;
+			border-color: $white transparent transparent transparent;
+			left: 45px;
+			@include size(0);
+		}
+	}
+	cite{
+		font-style: normal;
+		font-size: 12px;
+		line-height: (23/12);
+	}
+}
+/* =============================================
+	profilePicWrap styles
+============================================= */
+.profilePicWrap{
+	@include size(80px);
+}
+/* =============================================
+	callActionAsideBlock styles
+============================================= */
+.callActionAsideBlock{
+	font-size: 16px;
+	line-height: (30/16);
+}
+.contactForm{
+	z-index: 1;
+	.h4{
+		@include media-breakpoint-up(md){
+			font-size: 20px;
+		}
+		@include media-breakpoint-up(xl){
+			font-size: 25px;
+			line-height: 30px;
+		}
+	}
+	label{
+		font-size: 12px;
+		line-height: 14px;
+		margin-bottom: 7px;
+		color: $gray-500;
+		font-family: $font-family-monospace;
+	}
+	.form-control{
+		font-size: 0.8rem;
+		height: 45px;
+		box-shadow: none;
+		color: $gray-900;
+
+		&:focus{
+			border-color: $danger;
+		}
+	}
+	.btn{
+		width: 100%;
+		padding-top: 13px;
+		padding-bottom: 13px;
+		&.disabled{ opacity: 1; }
+		&:active,
+		&:hover,
+		&:focus{
+			box-shadow: none;
+		}
+	}
+}
+.error,
+.success{
+	margin-bottom: 20px;
+	border-radius: $border-radius;
+	padding: 12px 25px;
+	font-size: 14px;
+	line-height: 20px;
+	color: $white;
+}
+#msgSubmit{
+	display: none;
+	&.error{
+		display: block;
+	}
+	&.success{
+		display: block;
+	}
+}
+.success {
+	background-color: $green;
+}
+.error{
+	background-color: $red;
+}
+/* =============================================
+	pageFooter styles
+============================================= */
+#pageFooter{
+	p{
+		a{
+			transition: color 0.3s ease;
+			&:hover{
+				color: $dark;
+			}
+		}
+	}
+}
+
+/*------------------------------------------------------------------
+	thankyouBlock / .thankyouBlock
+-------------------------------------------------------------------*/
+.thankyouBlock{
+	min-height: 100%;
+	h1{
+		font-size: 30px;
+		line-height: 40px;
+		font-family: $font-family-monospace;
+		color: $white;
+		font-weight: 400;
+		@include media-breakpoint-up(md){
+			font-size: 45px;
+			line-height: 55px;
+		}
+		@include media-breakpoint-up(xl){
+			font-size: 55px;
+			line-height: 65px;
+		}
+	}
+	p{ color: $white; }
+}
+/*------------------------------------------------------------------
+	click / .click
+-------------------------------------------------------------------*/
+.click{
+	color: $blue;
+	text-decoration: underline;
+	line-height: 18px;
+}
+.videoHolder{
+	max-width: 100%;
+}
+/*------------------------------------------------------------------
+	playBtnWrap / .playBtnWrap
+-------------------------------------------------------------------*/
+.playBtnWrap{
+	@include size(60px);
+	@include media-breakpoint-up(sm){
+		@include size(70px);
+	}
+	@include media-breakpoint-up(md){
+		@include size(80px);
+	}
+	&:before,
+	&:after{
+		position: absolute;
+		content: "";
+		border:1px solid $white;
+		border-radius: 100%;
+		animation: myOrbit 4s infinite;
+	}
+	&:before{
+		top: -20px;
+		right: -20px;
+		@include size(100px);
+		@include media-breakpoint-up(sm){
+			@include size(110px);
+		}
+		@include media-breakpoint-up(md){
+			@include size(120px);
+		}
+	}
+	&:after{
+		top: -10px;
+		right: -10px;
+		@include size(80px);
+		@include media-breakpoint-up(sm){
+			@include size(90px);
+		}
+		@include media-breakpoint-up(md){
+			@include size(100px);
+		}
+	}
+}
+@keyframes myOrbit {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+}
+/*------------------------------------------------------------------
+	playBtnHolder / .playBtnHolder
+-------------------------------------------------------------------*/
+.playBtnHolder{
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	.playIcn{
+		@include size(0);
+		border-style: solid;
+		border-width: 8px 0 8px 15px;
+		border-color: transparent transparent transparent $gray-800;
+	}
+	.txt{
+		font-size: 	13px;
+		line-height: 20px;
+		@include media-breakpoint-up(md){
+			font-size: 	15px;
+			line-height: 24px;
+		}
+		@include media-breakpoint-only(xs){
+			text-shadow: 0px 0px 4px rgba($black,0.5);
+		}
+	}
+	.arrowImg{
+		max-width: 17px;
+		right: -31px;
+		bottom: 13px;
+	}
+}
+/*------------------------------------------------------------------
+	back-top / #back-top
+-------------------------------------------------------------------*/
+#back-top{
+	position: fixed;
+	right: 20px;
+	bottom: 20px;
+	font-size: 18px;
+	line-height: 20px;
+    cursor: pointer;
+    float: right;
+    @include size(50px, 50px);
+    padding: 14px 0;
+    z-index: 9;
+    opacity: 0;
+    background: $blue;
+    color: $white;
+    visibility: hidden;
+    transition: all 0.6s ease 0s;
+    &.active{
+    	opacity: 1;
+    	visibility: visible;
+    }
+}
+/*------------------------------------------------------------------
+	loader-holder / .loader-holder
+-------------------------------------------------------------------*/
+.loader-holder{
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  position: fixed;
+  background-color: rgba($white, 0.9);
+  .block {
+	  top: 50%;
+	  left: 50%;
+	  position: absolute;
+	  transform: translate(-50%, -50%);
+	}
+}

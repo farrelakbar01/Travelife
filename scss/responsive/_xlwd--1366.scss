@@ -1,0 +1,6 @@
+@include media-breakpoint-up(xlwd){
+	h1, .h1{
+		font-size: (60/16) + rem;
+		line-height: (80/60);
+	}
+}

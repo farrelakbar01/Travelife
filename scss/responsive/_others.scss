@@ -1,0 +1,31 @@
+/* hiddenXs styles */
+.hiddenXs{
+
+	@include media-breakpoint-down(sm){
+		display: none !important;
+	}
+}
+
+/* hiddenMd styles */
+.hiddenMd{
+
+	@include media-breakpoint-between(md, md){
+		display: none !important;
+	}
+}
+
+/* hiddenLg styles */
+.hiddenLg{
+
+	@include media-breakpoint-between(lg, lg){
+		display: none !important;
+	}
+}
+
+/* hiddenXl styles */
+.hiddenXl{
+
+	@include media-breakpoint-between(xl, xl){
+		display: none !important;
+	}
+}

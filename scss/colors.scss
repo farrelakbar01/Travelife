@@ -1,0 +1,25 @@
+@import "vendor/bootstrap/functions";
+@import "vendor/bootstrap/variables";
+
+@import "customVariables";
+@import "vendor/bootstrap/mixins";
+
+.btnTheme:hover,
+.btnTheme:focus,
+.btnTheme:active,
+.btnCallTo,
+.serviceColumn .icnWrap,
+#pageFooter p a{
+	color: $wpThemeColor;
+}
+
+.btnTheme,
+.ajubHeading:before,
+.ajubHeading:after,
+[data-tag="new"]:before{
+	background-color: $wpThemeColor;
+}
+
+.btnTheme{
+	border-color: $wpThemeColor;
+}

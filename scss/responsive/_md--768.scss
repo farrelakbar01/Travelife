@@ -1,0 +1,18 @@
+@include media-breakpoint-up(md){
+	h1, .h1{
+		font-size: (40/16) + rem;
+		line-height: (60/40);
+	}
+
+	h2, .h2{
+		font-size: (36/16) + rem;
+	}
+
+	[data-tag]{
+
+		&:before{
+			top: 20px;
+			left: 20px;
+		}
+	}
+}
